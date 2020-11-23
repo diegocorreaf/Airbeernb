@@ -7,7 +7,9 @@ class UsersController < ApplicationController
 
   def show; end
 
-  def edit; end
+  def edit
+    redirect_to edit_user_registration_path
+  end
 
   def update
     @user.update(user_params)
