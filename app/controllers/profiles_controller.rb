@@ -1,11 +1,11 @@
-class UsersController < ApplicationController
+class ProfilesController < ApplicationController
   # before_action :set_user, only: [:show, :edit, :update]
   
   def new
     @user = User.new
   end
 
-  def creat
+  def create
     @user = current_user
     if @user.update(user_params)
       redirect_to root_path
