@@ -4,6 +4,7 @@
     <%= cl_image_tag @product.photo.key, height: 370, width: 300, crop: :fill if @product.photo.attached? %>
     <h5><%= @product.description %></h5>
     <h4>$<%= @product.price %> </h4>
-    <%= link_to 'BUY', product_purchase_index_path(@product) %>
+    <%= link_to 'buy', product_purchase_index_path(product_id: @product.id), method: :post %>
     <%= link_to '<< Back to beer list', products_path %>
 </div>
+
