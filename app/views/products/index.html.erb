@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Products list</h2>
+
+
+ <div class='cards'>
+    <% @products.each do |beer| %>
+      <div class='card'>
+        <%= image_tag beer.photo, height: 180, width: 180, crop: :fill%>
+        <h4><%= link_to "#{beer.name}", beer_path(beer) %></h4>
+      </div>
+        <% end %>
+  </div>
+  <br>
+  <%= link_to 'Add beer', new_product_path, class: 'btn btn-warning add-index' %>
+
+</div>

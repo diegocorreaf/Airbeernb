@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+apa = Product.new(name: "Cerva1", description: "APA", price: 15)
+apa.save!
+puts apa.name
