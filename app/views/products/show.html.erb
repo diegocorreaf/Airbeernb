@@ -1,9 +1,19 @@
 <div class='container mt-4 mb-4'>
-  <h2><%= @product.name %></h2>
+
+  <h2 class="beer-show-name"><%= @product.name %></h2>
   <br>
-    <%= cl_image_tag @product.photo.key, height: 370, width: 300, crop: :fill if @product.photo.attached? %>
+  
+   <div class="details">
+    <%= cl_image_tag @product.photo.key, class: "show-pic", height: 370, width: 300, crop: :fill if @product.photo.attached? %>
+    <div class="details-text">
+    <h4>Beer description:</h4>
     <h5><%= @product.description %></h5>
     <h4>$<%= @product.price %> </h4>
-    <%= link_to 'buy', product_purchase_index_path(product_id: @product.id), method: :post %>
-    <%= link_to '<< Back to beer list', products_path %>
+    </div>
+   </div>
+   <div class="show-btn">
+    <%= link_to 'BUY this beer', product_purchase_index_path(product_id: @product.id), method: :post, class: 'btn btn-warning btn-buy' %>
+    <br>
+    <%= link_to '<< Back to beer list', products_path, class: "link-show" %>
+   </div>
 </div>

@@ -1,0 +1,38 @@
+.btn-buy {
+  margin-bottom: 20px;
+}
+
+.beer-show-name {
+  color: whitesmoke;
+  font-family: 'Patua One', cursive;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.show-pic {
+  border: 8px solid #181818;
+  border-radius: 3px;
+}
+
+.details {
+  display: flex;
+}
+
+.details-text {
+  margin: 30px;
+  color: whitesmoke;
+  font-family: 'Patua One', cursive;
+  
+}
+
+.show-btn {
+  margin-top: 20px;
+}
+
+.link-show {
+  color: whitesmoke;
+  &:hover {
+    color: yellowgreen;
+    text-decoration: none;
+  }
+}
