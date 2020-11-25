@@ -5,5 +5,5 @@
     <h5><%= @product.description %></h5>
     <h4>$<%= @product.price %> </h4>
     <%= link_to 'buy', product_purchase_index_path(product_id: @product.id), method: :post %>
-    <%= link_to '<< Back to beer list', products_path %>
+    <%= link_to '<< Back to beer list', products_path, class: "btn btn-primary" %>
 </div>

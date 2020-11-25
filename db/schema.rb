@@ -46,6 +46,11 @@ ActiveRecord::Schema.define(version: 2020_11_24_185538) do
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 
+  create_table "profiles", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "purchases", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "product_id", null: false
