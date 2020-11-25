@@ -16,3 +16,9 @@
   <%= link_to 'Add beer', new_product_path, class: 'btn btn-warning add-index' %>
 
 </div>
+
+<% @products.each do |beer| %>
+<%= beer.user.address %>
+<% end %>
+
+
