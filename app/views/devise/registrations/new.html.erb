@@ -1,4 +1,8 @@
-<h2>Sign up</h2>
+<div class='navbar-beer'>
+  <h2 class='index-title'>Airbnbeer <i class="fas fa-beer"></i></h2>
+</div>
+<div class="container">
+<h2 class= "login-text">Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -18,8 +22,9 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "btn, btn-warning" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
