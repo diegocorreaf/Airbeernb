@@ -19,6 +19,10 @@
 
 .btn-text {
   color: whitesmoke;
+  &:hover {
+    color: whitesmoke;
+    font-weight: bolder;
+  }
 }
 
 .btn-text-position {
