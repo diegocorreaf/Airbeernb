@@ -14,11 +14,12 @@ class ProductsController < ApplicationController
     @markers = @users.geocoded.map do |beer|
       {
         lat: beer.latitude,
-        lng: beer.longitude
-        infoWindow: render_to_string(partial: "info_window", locals: { flat: flat })
+        lng: beer.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { beer: beer })
       }
     end
   end
+
 
   def show; end
 
