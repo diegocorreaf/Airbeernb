@@ -1,14 +1,15 @@
+<div class='navbar-beer'>
+  <h2 class='index-title'>Beers list</h2>
+</div>
 <div class="container">
-  <h2>Beers list</h2>
 
 
  <div class='cards'>
     <% @products.each do |beer| %>
-      <div class='card'>
-        <%= cl_image_tag beer.photo.key, height: 70, width: 70, crop: :fill if beer.photo.attached? %>
-        <h4><%= beer.name %></h4>
-        <h6>$<%= beer.price %></h6>
-        <%= link_to "Details", product_path(beer) %>
+      <div class='card product-card'>
+        <h4><%= link_to beer.name, product_path(beer), class: 'beer-name' %></h4>
+        <%= cl_image_tag beer.photo.key, height: 200, width: 180, crop: :fill if beer.photo.attached? %>
+        <h6 class='price'>$<%= beer.price %></h6>
       </div>
         <% end %>
   </div>

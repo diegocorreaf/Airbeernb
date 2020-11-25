@@ -1,0 +1,53 @@
+.index-title {
+  font-family: 'Patua One', cursive;
+  color: whitesmoke;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  background-color: #f8efdd;
+  border: none;
+  margin: 20px 20px;
+  box-shadow: 3px 3px 11px #cabea9
+}
+
+body {
+  background-color: #2e2e2e;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.beer-name {
+  color: #621212;
+  font-family: 'Patua One', cursive;
+  font-size: 30px;
+  font-weight: 100;
+
+  &:hover {
+    text-decoration: none;
+    color: #bb0404;
+  }
+}
+
+.navbar-beer {
+  background-color:#181818;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.price {
+  font-weight: 700;
+  margin-top: 10px;
+  font-size: 19px;
+}
+
+.add-index {
+  width: 100%;
+}

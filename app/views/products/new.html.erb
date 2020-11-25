@@ -1,19 +1,23 @@
+<div class='navbar-beer'>
+<h2 class='add-title'>Add a new beer</h2>
+</div>
 <div class='container'>
-<h2>Add a new beer</h2>
-
+<div class='form-content'>
 <%= simple_form_for(@product) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
+  <div class="form-inputs fields">
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :photo, as: :file %>
   </div>
-
-  <div class="form-actions btn btn-success">
-    <%= f.button :submit %>
+  <div class='btn-text-position'>
+  <div class="form-actions btn btn-warning">
+    <%= f.button :submit, class: 'btn-text' %>
+  </div>
+  </div>
   </div>
 <% end %>
 </div>
