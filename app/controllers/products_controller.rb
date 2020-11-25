@@ -4,12 +4,18 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    
-    product_address = @products.user.address
-    @markers = product_address.geocoded.map do |beer|
+    @users = User.all
+    # @products.each do |beer|
+    #  product_address = beer.user.address
+    # end
+
+    # @product_address = @products.user.address
+
+    @markers = @users.geocoded.map do |beer|
       {
         lat: beer.latitude,
         lng: beer.longitude
+        infoWindow: render_to_string(partial: "info_window", locals: { flat: flat })
       }
     end
   end
