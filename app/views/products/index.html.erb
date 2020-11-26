@@ -1,19 +1,4 @@
-
-<div class='navbar-beer justify-content-between'>
-  <h2 class='index-title'>Airbnbeer <i class="fas fa-beer"></i></h2>
-  <%= form_tag products_path, method: :get do %>
-    <%= text_field_tag :query, params[:query], class: "form-control",
-        placeholder: "Give me a beer"%>
-    <%= submit_tag "Search", class: "btn btn-outline-light my-2 my-sm-0" %>
-  <% end %>
-
-
-
-  <%# <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-  </form> %>
-</div>
+<%= render "devise/shared/navbar" %>
 
 <div class="container">
 
