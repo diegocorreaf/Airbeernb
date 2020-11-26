@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :profiles, only: %i[new create]
+  resources :profiles, only: %i[new create edit update]
   resources :products, shallow: true do
     resources :purchases, only: %i[create]
   end
