@@ -3,8 +3,7 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
-    @products = Product.all
-    # @products = Product.where(' quantity > 0')
+    @products = Product.where('quantity > 0')
     @users = User.all
 
     @markers = @users.geocoded.map do |beer|
@@ -26,7 +25,9 @@ class ProductsController < ApplicationController
   end
 
 
-  def show; end
+  def show
+  @purchase = Purchase.new
+  end
 
   def new
     @product = Product.new
@@ -59,7 +60,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, :photo)
+    params.require(:product).permit(:name, :description, :price, :photo, :quantity)
   end
 
   def set_product
