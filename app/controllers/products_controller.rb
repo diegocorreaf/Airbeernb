@@ -15,7 +15,8 @@ class ProductsController < ApplicationController
       {
         lat: beer.latitude,
         lng: beer.longitude,
-        infoWindow: render_to_string(partial: "info_window", locals: { beer: beer })
+        infoWindow: render_to_string(partial: "info_window", locals: { beer: beer }),
+        image_url: helpers.asset_url('beer.png')
       }
     end
   end
