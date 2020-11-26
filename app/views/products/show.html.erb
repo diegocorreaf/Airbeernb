@@ -9,18 +9,26 @@
     <div class="details-text">
     <h4>Beer description:</h4>
     <h5><%= @product.description %></h5>
+    <h4>Un<%= @product.quantity %> </h4>
     <h4>$<%= @product.price %> </h4>
     </div>
    </div>
    <div class="show-btn">
-   <%# if @product.quatity > 0  %>
-    <%= link_to 'BUY this beer', product_purchase_index_path(product_id: @product.id), method: :post, class: 'btn btn-warning btn-buy' %>
-    <%# Simple form 
+   <% if @product.quantity > 0  %>
+    <%# <%= link_to 'BUY this beer', product_purchase_index_path(product_id: @product.id), method: :post, class: 'btn btn-warning btn-buy' %>
+      <%= simple_form_for [ @product, @purchase ] do |f| %>
+        <div class="form-inputs fields">
+          <%= number_field_tag :quantity %>
+        </div>
+        <%= f.button :submit, class: 'btn-text' %>
+      <% end %>
 
-    <br>
-    <%# else %>
-    <%# end %>
+    <% else %>
+      <div class="alert alert-warning" role="alert">
+      This product is sold-out!
+      </div>
+    <% end %>
+
     <%= link_to '<< Back to beer list', products_path, class: "link-show" %>
-
-   </div>
+  </div>
 </div>
