@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   # before_action :set_user, only: [:show, :edit, :update]
+  def show; end
   
   def new
     @user = User.new
@@ -12,6 +13,13 @@ class ProfilesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit; end
+
+  def update
+    @profile.update(profile_params)
+    redirect_to profile_path(@profile)
   end
 
 private
