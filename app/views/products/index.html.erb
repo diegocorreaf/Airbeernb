@@ -8,13 +8,15 @@
     <% @products.each do |beer| %>
       <div class='card product-card'>
         <h4><%= link_to beer.name, product_path(beer), class: 'beer-name' %></h4>
-        <%= cl_image_tag beer.photo.key, height: 200, width: 180, crop: :fill if beer.photo.attached? %>
+        <%= cl_image_tag beer.photo.key, height: 190, width: 180, crop: :fill if beer.photo.attached? %>
         <h6 class='price'>$<%= beer.price %></h6>
       </div>
         <% end %>
   </div>
   <br>
+  <div class="add-beer-btn">
   <%= link_to 'Add beer', new_product_path, class: 'btn btn-warning add-index' %>
+  </div>
 
 
 
