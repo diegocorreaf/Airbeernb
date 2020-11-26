@@ -1,6 +1,6 @@
 <div class="container">
   <h4 class="my-4">Complete your registration</h4>
-
+  <div class="registration">
   <%= simple_form_for @user, url: profiles_path, method: :post do |f| %>
 
     <%= f.input :name %>
@@ -10,6 +10,7 @@
 
   <% end %>
 <br>
+  </div>
 <%= link_to "Home", root_path, class: 'btn btn-primary' %>
 <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
 </div>
