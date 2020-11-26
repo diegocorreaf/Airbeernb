@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 150px;
+  width: 200px;
   padding: 5px;
   background-color: #f8efdd;
   border: none;
   margin: 20px 10px;
-  box-shadow: 3px 3px 11px #cabea9;
+  box-shadow: 1px 1px 5px #cabea9;
   padding-top: 5px;
 }
 
@@ -19,14 +19,14 @@ body {
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
 
 .beer-name {
   color: #621212;
-  font-family: 'Patua One', cursive;
-  font-size: 25px;
-  font-weight: 100;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 
   &:hover {
     text-decoration: none;
@@ -50,7 +50,7 @@ body {
 }
 
 .add-index {
-  width: 30%;
+  width: fit-content;
 }
 
 .add-beer-btn {
