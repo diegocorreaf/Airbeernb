@@ -1,7 +1,11 @@
-<div class='navbar-beer'>
-  <h2 class='index-title'>Airbnbeer <i class="fas fa-beer"></i></h2>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'beer-banner.jpg' %>);">
+  <div class="container">
+    <h1>Airbnbeer</h1>
+    <p>The best place to buy and sell craft beer</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
 </div>
-<div class= "container">
+<div class= "container login">
 <h2 class="login-text">Log in</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
