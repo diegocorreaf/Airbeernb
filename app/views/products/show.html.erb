@@ -14,8 +14,14 @@
     </div>
    </div>
    <div class="show-btn">
+   <%# if @product.quatity > 0  %>
     <%= link_to 'BUY this beer', product_purchase_index_path(product_id: @product.id), method: :post, class: 'btn btn-warning btn-buy' %>
+    <%# Simple form 
+
     <br>
+    <%# else %>
+    <%# end %>
     <%= link_to '<< Back to beer list', products_path, class: "link-show" %>
+
    </div>
 </div>
