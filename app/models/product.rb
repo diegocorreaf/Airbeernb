@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :user
+  has_many :purchases, dependent: :destroy
   validates :name, presence: true
   validates :description, presence: true
   validates :price, presence: true
@@ -13,4 +14,6 @@ class Product < ApplicationRecord
       tsearch: { prefix: true }
     }
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 end
