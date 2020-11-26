@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    # @products = Product.where('quantity > 0')
+    # @products = Product.where(' quantity > 0')
     @users = User.all
 
     @markers = @users.geocoded.map do |beer|
