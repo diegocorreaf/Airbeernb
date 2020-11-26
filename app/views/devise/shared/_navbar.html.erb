@@ -5,7 +5,7 @@
         <%= image_tag "avatar.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", "data-toggle": "dropdown" if current_user %>
         <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
           <%= link_to "Profile", profile_path(current_user), class: 'dropdown-item' %>
-          <%= link_to "Edit Profile", edit_profile_path(current_user), class: 'dropdown-item' %>
+          <%= link_to "EditProfile", edit_profile_path(current_user), class: 'dropdown-item' %>
           <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'dropdown-item' %>
           
         </div>
@@ -14,7 +14,7 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Products</a>
+        <%= link_to "Beers", products_path, class: 'nav-link' %>
       </li>
     </ul>
   </div>

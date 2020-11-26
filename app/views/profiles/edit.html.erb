@@ -1,12 +1,12 @@
 <%= render "devise/shared/navbar" %>
-
-<div>
-  <%= simple_form_for @user, url: profiles_path, method: :post do |f| %>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :phone_number %>
-    <%= f.submit 'Edit profile', class: 'btn btn-primary d-flex flex-row-reverse' %>
-  <% end %>
-
-   <%= link_to 'Beer List ', products_path, class: "btn btn-warning " %>
+<br>
+<div class="container">
+  <div>
+    <%= simple_form_for @user, url: profiles_path, method: :post do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :phone_number %>
+      <%= f.submit 'Edit profile', class: 'btn btn-warning' %>
+    <% end %>
+  </div>
 </div>
