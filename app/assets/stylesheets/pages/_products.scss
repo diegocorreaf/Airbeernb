@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 150px;
+  width: 200px;
   padding: 5px;
   background-color: #f8efdd;
   border: none;
@@ -19,7 +19,7 @@ body {
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
 
 .beer-name {
