@@ -3,9 +3,10 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
-    @users = User.all
+    # @users = User.all
+    @products = Product.all
 
-    @markers = @users.geocoded.map do |beer|
+    @markers = @products.geocoded.map do |beer|
       {
         lat: beer.latitude,
         lng: beer.longitude,
@@ -59,7 +60,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :description, :price, :photo, :quantity)
+    params.require(:product).permit(:name, :address, :description, :price, :photo, :quantity)
   end
 
   def set_product
