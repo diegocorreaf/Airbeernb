@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+<<<<<<< HEAD
+  resources :profiles, only: %i[new create edit update show]
+=======
   resources :profiles, only: %i[index show new create edit update]
+>>>>>>> 991efa8951ea4468285c1ef46cc43aa6b048f694
   resources :products, shallow: true do
     resources :purchases, only: %i[create]
   end
