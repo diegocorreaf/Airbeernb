@@ -1,8 +1,9 @@
 <div class="container">
   <ul class="list-unstyled">
-  <li><a href="#" class='btn btn-outline-primary'> <%= beer.name if beer.description %></a></li>
-  </h2>
-</ul>
-</div>
-
+    <p>
+      <li>
+        <%= link_to beer.name, product_path(beer), class: 'beer-name' %>
+      </li>
+   </p>
+  </ul>
 </div>
