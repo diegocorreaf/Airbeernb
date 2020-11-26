@@ -3,7 +3,6 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
-    @products = Product.where('quantity > 0')
     @users = User.all
 
     @markers = @users.geocoded.map do |beer|
@@ -19,7 +18,7 @@ class ProductsController < ApplicationController
     if query.present?
       @products = Product.beer_search(query)
     else
-      @products = Product.all
+      @products = Product.where('quantity > 0')
     end
 
   end

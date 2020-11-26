@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :profiles, only: %i[new create]
   resources :products, shallow: true do
-    resources :purchase, only: %i[create]
+    resources :purchases, only: %i[create]
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
