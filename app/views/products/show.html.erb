@@ -1,6 +1,5 @@
-  <div class='navbar-beer'>
-  <h2 class='index-title'>Airbnbeer <i class="fas fa-beer"></i></h2>
-</div>
+  <%= render "devise/shared/navbar" %>
+
 <div class='container mt-4 mb-4'>
   <h2 class="beer-show-name"><%= @product.name %></h2>
   <br>
@@ -14,8 +13,14 @@
     </div>
    </div>
    <div class="show-btn">
+   <%# if @product.quatity > 0  %>
     <%= link_to 'BUY this beer', product_purchase_index_path(product_id: @product.id), method: :post, class: 'btn btn-warning btn-buy' %>
+    <%# Simple form 
+
     <br>
+    <%# else %>
+    <%# end %>
     <%= link_to '<< Back to beer list', products_path, class: "link-show" %>
+
    </div>
 </div>
