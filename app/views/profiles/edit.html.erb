@@ -1,9 +1,12 @@
- 
+<%= render "devise/shared/navbar" %>
 
-<%= simple_form_for @user, url: profiles_path, method: :post do |f| %>
+<div>
+  <%= simple_form_for @user, url: profiles_path, method: :post do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :phone_number %>
-    <%= f.submit 'Complete your registration', class: 'btn btn-primary btn-block' %>
-
+    <%= f.submit 'Edit profile', class: 'btn btn-primary d-flex flex-row-reverse' %>
   <% end %>
+
+   <%= link_to 'Beer List ', products_path, class: "btn btn-warning " %>
+</div>
