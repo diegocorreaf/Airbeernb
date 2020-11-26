@@ -4,12 +4,8 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    # @products = Product.where(' quantity > 0')
     @users = User.all
-    # @products.each do |beer|
-    #  product_address = beer.user.address
-    # end
-
-    # @product_address = @products.user.address
 
     @markers = @users.geocoded.map do |beer|
       {
@@ -19,6 +15,14 @@ class ProductsController < ApplicationController
         image_url: helpers.asset_url('beer.png')
       }
     end
+
+    query = params[:query]
+    if query.present?
+      @products = Product.beer_search(query)
+    else
+      @products = Product.all
+    end
+
   end
 
 
