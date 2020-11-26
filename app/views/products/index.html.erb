@@ -15,6 +15,7 @@
   </div>
   <br>
   <%= link_to 'Add beer', new_product_path, class: 'btn btn-warning add-index' %>
+  <%= link_to 'Edit profile', edit_profile_path(current_user), class: 'btn btn-warning add-index' if current_user %>
 
 
 
