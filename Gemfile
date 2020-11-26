@@ -67,3 +67,6 @@ gem 'devise'
 
 # Geocoder
 gem 'geocoder'
+
+# Pg Search
+gem 'pg_search', '~> 2.3.0'

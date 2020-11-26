@@ -19,6 +19,14 @@ class ProductsController < ApplicationController
         image_url: helpers.asset_url('beer.png')
       }
     end
+
+    query = params[:query]
+    if query.present?
+      @products = Product.beer_search(query)
+    else
+      @products = Product.all
+    end
+
   end
 
 
