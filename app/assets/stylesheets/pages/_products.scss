@@ -8,7 +8,7 @@
   background-color: #f8efdd;
   border: none;
   margin: 20px 10px;
-  box-shadow: 3px 3px 11px #cabea9;
+  box-shadow: 1px 1px 5px #cabea9;
   padding-top: 5px;
 }
 
@@ -24,9 +24,9 @@ body {
 
 .beer-name {
   color: #621212;
-  font-family: 'Patua One', cursive;
-  font-size: 25px;
-  font-weight: 100;
+  font-family: 'Epilogue', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
 
   &:hover {
     text-decoration: none;
@@ -50,7 +50,7 @@ body {
 }
 
 .add-index {
-  width: 30%;
+  width: fit-content;
 }
 
 .add-beer-btn {
