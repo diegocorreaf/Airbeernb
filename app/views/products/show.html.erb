@@ -4,33 +4,47 @@
   <h2 class="beer-show-name"><%= @product.name %></h2>
   <br>
   
+  <table class="table">
+   <thead>
+     <tr>
+      <th> Description </th>
+      <th> Quantity </th>
+      <th> Price </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  
    <div class="details">
     <%= cl_image_tag @product.photo.key, class: "show-pic", height: 370, width: 300, crop: :fill if @product.photo.attached? %>
     <div class="details-text">
-    <h4>Beer description:</h4>
-    <h5><%= @product.description %></h5>
-    <h4>Un<%= @product.quantity %> </h4>
-    <h4>$<%= @product.price %> </h4>
+
+    <tbody>
+    <th><h5><%= @product.description %></h5></th>
+    <td><h4>Un<%= @product.quantity %> </h4></td>
+    <td><h4>$<%= @product.price %> </h4></td>
+     </tr>
+      </tbody>
+      </table>
     </div>
    </div>
-   <div class="show-btn">
-   <% if @product.quantity > 0  %>
-    <%# <%= link_to 'BUY this beer', product_purchase_index_path(product_id: @product.id), method: :post, class: 'btn btn-warning btn-buy' %>
-      <%= simple_form_for [ @product, @purchase ] do |f| %>
+
+
+  <div class="d-flex flex-row">
+    <div class="show-btn">
+      <% if @product.quantity > 0  %>
+        <%= simple_form_for [ @product, @purchase ] do |f| %>
         <div class="form-inputs fields">
           <%= number_field_tag :quantity %>
         </div>
-        <%= f.button :submit, class: 'btn-text' %>
-      <% end %>
-
-
-
+          <div>
+            <%= f.button :submit, 'Buy', class: 'btn btn-warning' %>
+          </div>
+        <% end %>
+    </div>
+  </div>
     <% else %>
       <div class="alert alert-warning" role="alert">
-      This product is sold-out!
-      </div>
+      This product is sold-out!  
     <% end %>
-
-    <%= link_to '<< Back to beer list', products_path, class: "link-show" %>
-  </div>
 </div>

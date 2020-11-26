@@ -1,9 +1,12 @@
- 
-
-<%= simple_form_for @user, url: profiles_path, method: :post do |f| %>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :phone_number %>
-    <%= f.submit 'Complete your registration', class: 'btn btn-primary btn-block' %>
-
-  <% end %>
+<%= render "devise/shared/navbar" %>
+<br>
+<div class="container">
+  <div>
+    <%= simple_form_for @user, url: profiles_path, method: :post do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :phone_number %>
+      <%= f.submit 'Edit profile', class: 'btn btn-warning' %>
+    <% end %>
+  </div>
+</div>
