@@ -1,3 +1,17 @@
-<%= @user.name %>
-<%= @user.address %>
-<%= @user.email %>
+<%= render "devise/shared/navbar" %>
+
+<div class="container">
+<%# @user.name %>
+<%# @user.address %>
+<%# @user.email %>
+
+ <div class="card profile-card">
+          <h1>Paty Mayonese </h1>
+          <%= image_tag "avatar.jpg", size: "200x200", class: "profile-pic" %>
+          <h5>Dance Teacher</h5>
+          <p>The goal of my life is to drink every kind of beers of the world. 
+          And Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Duis faucibus pharetra faucibus. Quisque pharetra arcu in nisl porttitor, 
+          nec tempus diam semper.</p>
+        </div>
+</div>

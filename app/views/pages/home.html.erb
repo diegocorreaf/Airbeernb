@@ -1,3 +1,5 @@
+<%= render "devise/shared/navbar" %>
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'beer-banner.jpg' %>);">
   <div class="container">
     <h1>Airbnbeer</h1>
@@ -8,13 +10,13 @@
 <div class="container">
 
 
-  <div class='home-btns'>
+  <%# <div class='home-btns'>
   <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary' %>
-  <%= link_to "Sign in", new_user_session_path, class: 'btn btn-primary' %>
-  <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
-  </div>
-
+  <%# link_to "Sign in", new_user_session_path, class: 'btn btn-primary' %>
+  <%# link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+  <%# </div> %>
+<%# 
 <br>
-<%= link_to "Beer list", products_path, class: 'btn btn-warning mt-1' %>
+<%= link_to "Beer list", products_path, class: 'btn btn-warning mt-1' %> 
 
 </div>
