@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'purchase/create'
   devise_for :users
-  root to: 'pages#home'
+  root to: 'products#index'
 
   resources :profiles, only: %i[index show new create edit update]
   resources :products, shallow: true do

@@ -1,7 +1,7 @@
 <%= render "devise/shared/navbar" %>
 <br>
 <div class="container">
-  <div>
+  <div class="edit-profile">
     <%= simple_form_for @user, url: profiles_path, method: :post do |f| %>
       <%= f.input :name %>
       <%= f.input :address %>
