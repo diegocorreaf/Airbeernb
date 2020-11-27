@@ -1,0 +1,51 @@
+body {
+  background: #333;
+  color: #fff;
+}
+
+.navbar {
+  border-bottom: #e6d708 3px solid;
+  opacity: 0.8;
+  font-family: sansita swashed;
+  color: #ffce49;
+}
+
+#home-section2 {
+  background: asset_url('beer22.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px;
+}
+
+#home-section2 .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 700px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#home-section2 .home-inner {
+  padding-top: 150px;
+}
+
+#home-section2 .card-form {
+  opacity: 0.8;
+}
+
+#home-section .fas,
+#create-section .fas {
+  color: #b8c322;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#beer-section .fas,
+#share-section .fas {
+  background: rgb(51, 51, 51);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}

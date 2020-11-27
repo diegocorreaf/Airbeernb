@@ -1,28 +1,110 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'beer-banner.jpg' %>);">
-  <div class="container">
-    <h1>Airbnbeer</h1>
-    <p>The best place to buy and sell craft beer</p>
-  </div>
-</div>
-<div class= "container login">
-<h2 class="login-text">Log in</h2>
+<body data-spy="scroll" data-target="#main-nav" id="home">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="main-nav">
+    <div class="container">
+      <%= link_to "AirbnBeer", root_path, class: 'navbar-brand' %>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item x1">
+            <%= link_to "Beers", products_path, class: 'nav-link' %>
+      </li>
+          </li>
+          <li class="nav-item x1">
+            <%= link_to "Sign Up", new_user_registration_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+  <!-- HOME SECTION -->
+  <header id="home-section">
+    <div class="dark-overlay">
+      <div class="home-inner container">
+        <div class="row">
+          <div class="col-lg-8 d-none d-lg-block">
+            <h1 class="display-4">
+              We don't believe in hangover!
+            </h1>
+            <div class="d-flex">
+              <div class="p-4 align-self-start">
+                <i class="fas fa-beer fa-2x"></i>
+              </div>
+              <div class="p-4 align-self-end">
+                The best place to buy and sell craft beer in the whole world
+              </div>
+            </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in", class: "btn btn-warning"%>
-  </div>
-<% end %>
+            <div class="d-flex">
+              <div class="p-4 align-self-start">
+                <i class="fas fa-beer fa-2x"></i>
+              </div>
+              <div class="p-4 align-self-end">
+                Forget about therapy, the only thing you need is alcohool, specially BEER!
+              </div>
+            </div>
 
-<%= render "devise/shared/links" %>
-</div>
+            <div class="d-flex">
+              <div class="p-4 align-self-start">
+                <i class="fas fa-beer fa-2x"></i>
+              </div>
+              <div class="p-4 align-self-end">
+                It's like Airbnb, but without the apartments, houses, flats or whatever. Actually, is nothing like Airbnb. I'm drunk! Buurp*
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card bg-warning text-center card-form">
+              <div class="card-body">
+                <h3>Drink up today</h3>
+                <p>Sign in and have fun</p>
+                  <div class="form-group">
+                    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                      <%= f.input :email,
+                          required: false,
+                          placeholder: 'Email',
+                          label: false,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" } %>
+                    </div>
+                    <div class="form-group">
+                      <%= f.input :password,
+                            required: false,
+                            placeholder: 'Password',
+                            label: false,
+                            input_html: { autocomplete: "current-password" } %>
+                  </div>
+                  <div>
+                  <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                  </div>
+                  <%= f.button :submit, "Log in", class: "btn btn-outline-light btn-block"%>
+                  <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <section id="beer-head-section">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center py-5">
+          <h1 class="display-4">Just buy beer</h1>
+          <p class="lead">Explore all the alcohool that your body can take. Buy beer, forget about your responsabilities. Life it's just a bullshit!
+          </p>
+          <%= link_to "Beers", products_path, class: 'btn btn-warning' %>
+      </li>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
