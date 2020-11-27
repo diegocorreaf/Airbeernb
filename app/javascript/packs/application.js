@@ -21,6 +21,9 @@ require("channels")
 // Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
+import "plugins/popper";
+import "plugins/bootstrap";
+import "plugins/jquery";
 
 // External imports
 import "bootstrap";
