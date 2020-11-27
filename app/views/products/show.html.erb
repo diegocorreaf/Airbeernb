@@ -25,10 +25,10 @@
       <% if @product.quantity > 0  %>
         <%= simple_form_for [ @product, @purchase ] do |f| %>
         <div class="form-inputs fields">
-          <%= number_field_tag :quantity, nil, class: "form-control" %>
+          <%= number_field_tag :quantity, nil, class: "form-control units" %>
         </div>
           <div class="buy-button">
-            <%= f.button :submit, 'Buy this marvelous beer', class: 'btn btn-warning' %>
+            <%= f.button :submit, 'Buy beer', class: 'btn btn-warning' %>
           </div>
         <% end %>
     </div>
