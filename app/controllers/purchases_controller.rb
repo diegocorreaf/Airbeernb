@@ -14,7 +14,7 @@ class PurchasesController < ApplicationController
     if @purchase.save
       @product.quantity -= quantity
       @product.save
-      redirect_to root_path
+      redirect_to products_path
     else
       render 'purchases/show'
     end

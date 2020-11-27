@@ -1,3 +1,4 @@
+
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
@@ -18,23 +19,36 @@
     </ul>
   </div>
 
-  <div class="airbnbeer">
-   <h2 class='navbar-title'>Airbnbeer <i class="fas fa-beer"></i></h2>
-  </div>
-  
-  
-  <div class="search-bar">
-  <div class="field">
-     <%= form_tag products_path, method: :get do %>
-    <%= text_field_tag :query, params[:query], class: "form-control",
-        placeholder: "Give me a beer"%>
-  </div>
-    <%= submit_tag "Search", class: "btn btn-outline-light my-2 my-sm-0" %>
-  <% end %>
-  </div>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-</div>
+<body data-spy="scroll" data-target="#main-nav" id="home">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top mb-30px" id="main-nav">
+    <div class="container">
+      <%= link_to "AirbnBeer", root_path, class: 'navbar-brand' %>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle x1" data-toggle="dropdown">Your Pint</a>
+                    <div class="dropdown-menu">
+                        <%= link_to 'Add beer', new_product_path, class: 'dropdown-item x1' %>
+                        <%= link_to "Beers", products_path, class: 'dropdown-item x1' %>
+                        <%= link_to "Profile", profile_path(current_user), class: 'dropdown-item x1' if current_user %>
+                        <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'dropdown-item x1' if current_user %>
+                        </ul>
+                  <div class="form-inline ml-auto x1">
+                  <div class="field">
+                    <%= form_tag products_path, method: :get do %>
+                    <%= text_field_tag :query, params[:query], class: "form-control",
+                        placeholder: "Give me a beer"%>
+                  </div>
+                    <%= submit_tag "Search", class: "btn btn-outline-light ml-1 my-sm-0" %>
+                  <% end %>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              </div>
+           </nav>
